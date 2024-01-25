@@ -1,6 +1,6 @@
 // What is Node JS and why do we need it?
 // Node JS is a runtime environment for executing JavaScript code outside of a browser.
-// According to definition, Node JS is a JavaScript runtime built Google Chrome's open source V8 Engine.
+// According to definition, Node JS is a JavaScript runtime built on Google Chrome's open source V8 Engine.
 
 // What is a runtime environment?
 // A runtime environment is where the code is executed when we run it.
@@ -66,10 +66,8 @@
 
 // Why node JS is better than other backend languages?
 // Node JS is single threaded, event driven and non-blocking I/O model which makes it lightweight and efficient.
-// Node JS is single threaded which means it has only one thread to execute JavaScript code.
-// This makes it lightweight and efficient.
-// Node JS uses an event driven and non-blocking I/O model.
-// This means that Node JS uses events and callbacks to handle requests.
+// Node JS is single threaded which means it has only one thread to execute JavaScript code, which means it can only do one task at a time.
+// Node JS uses an event driven and non-blocking I/O model means that Node JS uses events and callbacks to handle requests.
 // When a request comes in, Node JS will execute the relevant event handler.
 // If the event handler needs to access a file or make an API call, Node JS will not wait for the operation to complete.
 // It will register a callback and continue executing the rest of the code.
@@ -128,6 +126,7 @@
 // There is a huge library of open source packages available for Node JS.
 // We can use these packages to build our applications with the help of npm.
 // npm is a package manager for Node JS.
+// npm stands for node package manager.
 // It is the largest ecosystem of open source libraries in the world.
 // It has over 1 million packages.
 // It is used by millions of developers.

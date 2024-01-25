@@ -148,6 +148,9 @@
 // There are many more features of the readline module.
 // You can read about them in the documentation of the readline module in the node js website.
 
+// Task - 1
+// Create a simple calculator using the readline module in node js.
+// Solution
 // Lets create a simple calculator.
 // Lets create a file called calculator.js.
 // Lets create an interface.
@@ -201,3 +204,114 @@
 // calculator();
 
 // // This is how we can create a simple calculator in node js using the readline module.
+
+// Task - 2
+// Create a program that will ask the user to enter his/her name and age until the user enters his/her name as John and age as 25.
+
+// Solution
+// const readline = require('readline');
+
+// const rl = readline.createInterface({
+//     input: process.stdin,
+//     output: process.stdout
+// });
+
+// const ask = () => {
+//     rl.question('Enter your name: ', (name) => {
+//         rl.question('Enter your age: ', (age) => {
+//             if (name === 'John' && age === '25') {
+//                 console.log('Success');
+//                 rl.close();
+//             } else {
+//                 ask();
+//             }
+//         });
+//     });
+// };
+
+// ask();
+
+// This is how we can create a program that will ask the user to enter his/her name and age until the user enters his/her name as John and age as 25.
+
+
+// Task - 3
+// Create programs for printing the multiplication table of a number entered by the user.
+// Solution
+// const readline = require('readline');
+
+// const rl = readline.createInterface({
+//     input: process.stdin,
+//     output: process.stdout
+// });
+
+
+// const multiplicationTable = () => {
+//     rl.question('Enter a number: ', (number) => {
+//         number = Number(number);
+//         let table = '';
+//         for (let i = 1; i <= 10; i++) {
+//             table += `${number} * ${i} = ${number * i}\n`;
+//         }
+//         console.log(table);
+//         rl.close();
+//     });
+// };
+
+// multiplicationTable();
+
+
+// Task - 4
+// Create a program for printing the Fibonacci series.
+// Solution
+// const readline = require('readline');
+
+// const rl = readline.createInterface({
+//     input: process.stdin,
+//     output: process.stdout
+// });
+
+// const fibonacci = () => {
+//     rl.question('Enter the number of terms: ', (number) => {
+//         number = Number(number);
+//         let firstNumber = 0;
+//         let secondNumber = 1;
+//         let series = '';
+//         for (let i = 1; i <= number; i++) {
+//             series += `${firstNumber} `;
+//             let thirdNumber = firstNumber + secondNumber;
+//             firstNumber = secondNumber;
+//             secondNumber = thirdNumber;
+//         }
+//         console.log(series);
+//         rl.close();
+//     });
+// };
+
+// fibonacci();
+
+
+// Task - 5
+// Create a program for printing the factorial of a number entered by the user.
+// Solution
+// const readline = require('readline');
+
+// const rl = readline.createInterface({
+//     input: process.stdin,
+//     output: process.stdout
+// });
+
+// const factorial = () => {
+//     rl.question('Enter a number: ', (number) => {
+//         number = Number(number);
+//         let result = 1;
+//         for (let i = 1; i <= number; i++) {
+//             result *= i;
+//         }
+//         console.log(result);
+//         rl.close();
+//     });
+// };
+
+// factorial();
+
+// I hope you have learned readline module in node js.
