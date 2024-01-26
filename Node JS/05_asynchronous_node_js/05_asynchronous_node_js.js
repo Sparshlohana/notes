@@ -1,6 +1,6 @@
 // Let us understand the asynchronous nature of Node JS and why it is important.
 
-// Let us understand what is synchronous code.
+// But let us first understand what is synchronous code.
 // Synchronous code is the code which is executed line by line. The next line of code is executed only when the previous line of code is executed.
 // Example:
 // const fs = require('fs');
@@ -8,8 +8,8 @@
 // console.log(data);
 
 // This is a synchronous code. The next line of code will only be executed line by line after execution of previous line is finished.
-// If any line of code takes some time to execute, it will block the execution of the code and cause performance issues.
-// In our case if the read.txt file is very large, it will take some time to read the file and cause the blocking of the code.
+// If any line of code takes some time to execute, it will block the execution of the code and will cause performance issue.
+// In our case if the read.txt file is very large, it will take some time to read the file and will cause the blocking of the code.
 // Thats why we say synchronous code is blocking code.
 
 // This is where asynchronous code comes into the picture.
@@ -23,11 +23,11 @@
 // console.log("This is a message of read file.");
 
 // This is an asynchronous code. The next line of code will be executed even if the previous line of code is not executed.
-// If any line of code takes some time to execute, it will not block the execution of the code and cause performance issues.
+// If any line of code takes some time to execute, it will not block the execution of the code and will not cause performance issues.
 // This is because callbacks are used in asynchronous code.
 // Callbacks are registered and once the execution of the code is finished, the callback is called.
 // Which means that the main thread of the code is not blocked as the callback is running in the background.
-// When the code run, in our case the read.txt file is read in the background and the callback is called when the file is read completely. So first the message "This is a message of read file." is printed and then the data of the file is printed.
+// When the code runs, in our case the read.txt file is read in the background and the callback is called when the file is read completely. So first the message "This is a message of read file." is printed and then the data of the file is printed.
 // This is how asynchronous code is executed.
 
 // This is how we can read a file asynchronously.
