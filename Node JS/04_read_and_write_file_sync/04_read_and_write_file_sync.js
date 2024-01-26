@@ -58,8 +58,7 @@
 // To write a file synchronously, we can use the writeFileSync function.
 // This function takes three arguments. The first argument is the path of the file, the second argument is the data to be written in the file and the third argument is the encoding.
 
-// Let us create a file and write some text in it.
-// Let us create a file named write.txt and write some text in it.
+// Let us create a file named write.txt.
 
 // Let us write some text in the file write.txt synchronously.
 
@@ -84,7 +83,7 @@
 // If the file does not exist, it will create a file and append the text in it.
 
 // Task-1
-// Don't create anu file, just write code to write today's date and time in a file named date.txt.
+// Don't create any file, just write code to write today's date and time in a file named date.txt.
 // Solution
 
 // const fs = require('fs');
