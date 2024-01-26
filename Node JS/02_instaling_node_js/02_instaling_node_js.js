@@ -38,7 +38,7 @@
 // You can do all sorts of experiments here. Go ahead and try it out!!
 // To exit the REPL, press Ctrl + C twice.
 
-// If you exit the REPL, and then again enter and REPL, you won't be able to access previously defined variables as when you exit the REPL, all the variables are destroyed.
+// If you exit the REPL, and then again enter and REPL, you won't be able to access previously defined variables when you exit the REPL, all the variables are destroyed.
 
 // Here we learned and saw that node js allows us to execute JavaScript code outside the browser.
 
@@ -49,11 +49,6 @@
 // Lets understand this with an example.
 // Open the command prompt.
 // Type node and press enter.
-// Lets say I want to add two numbers.
-// So I will type 30 + 20 and press enter.
-// When I press enter, node will read the expression, evaluate it, print the result then it will wait for the next input. That's why it is called REPL.
-
-// Lets see one more example.
 // lets create a user object.
 // Type let user = {name: 'John', age: 30} and press enter.
 // This will create a user object.
