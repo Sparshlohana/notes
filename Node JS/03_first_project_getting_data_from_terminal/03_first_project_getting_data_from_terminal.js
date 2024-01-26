@@ -40,7 +40,7 @@
 // How to use modules?
 // We can use modules by importing them in our application.
 // We can import modules using the require function.
-// Here we will be using a module called readline module for getting input from the user.
+// Here we will be using a module called readline module for getting input from the user using terminal.
 // require('readline');
 // This require function returns an object.
 // We can store this object in a variable.
@@ -125,7 +125,7 @@
 // This function will be called when the application is closed.
 // We are printing Bye Bye on the console when the application is closed.
 
-// Lets run the application.q
+// Lets run the application.
 // node app.js
 // What is your name? John
 // Hello John
@@ -235,7 +235,7 @@
 
 
 // Task - 3
-// Create programs for printing the multiplication table of a number entered by the user.
+// Create a program for printing the multiplication table of a number entered by the user.
 // Solution
 // const readline = require('readline');
 
