@@ -147,3 +147,81 @@
 
 // Now if we stop the server and make a request to the server, we will get an error in the browser.
 // This is because the server is not running and is not ready to handle requests.
+
+
+// Task 1:
+// Create a web server with 5000 port and send a response "Hello from the server" to the client.
+// Solution:
+// const http = require('http');
+
+// const server = http.createServer((req, res) => {
+//     res.end("Hello from the server");
+// });
+
+// server.listen(5000, () => {
+//     console.log("Server started on port 5000");
+// });
+
+
+// Task 2:
+// Create a web server with 3000 port and get the url of the request and send it as a response to the client.
+// Solution:
+// const http = require('http');
+
+// const server = http.createServer((req, res) => {
+//     const url = req.url;
+//     res.end(url);
+// });
+
+// server.listen(3000, () => {
+//     console.log("Server started on port 3000");
+// });
+
+
+// Task 3:
+// Create a web server with 4000 port and get the method of the request and send it as a response to the client.
+// Solution:
+// const http = require('http');
+
+// const server = http.createServer((req, res) => {
+//     const method = req.method;
+//     res.end(method);
+// });
+
+// server.listen(4000, () => {
+//     console.log("Server started on port 4000");
+// });
+
+
+// Task 4:
+// Send query parameters as a response to the client.
+// Solution:
+// const http = require('http');
+
+// const server = http.createServer((req, res) => {
+//     const query = req.url.split('?')[1];
+//     res.end(query);
+// });
+
+// server.listen(5000, () => {
+//     console.log("Server started on port 5000");
+// });
+
+
+// Task 5:
+// Get the headers of the request and send it as a response to the client.
+// Solution:
+// const http = require('http');
+
+// const server = http.createServer((req, res) => {
+//     const headers = req.headers;
+//     res.end(headers);
+// });
+
+// server.listen(5000, () => {
+//     console.log("Server started on port 5000");
+// });
+
+
+// Please note that we do not use res.end() much.
+// This is for learning purpose only.
