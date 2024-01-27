@@ -174,7 +174,7 @@
 
 
 // Task 2:
-// Update the task 1 in such a way that, whenever you know run the program, it should also append the table in a file named table-history.txt.
+// Update the task 1 in such a way that, whenever you now run the program, it should also append the table in a file named table-history.txt.
 // Solution:
 // const fs = require('fs');
 
