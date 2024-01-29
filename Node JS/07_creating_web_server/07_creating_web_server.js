@@ -1,6 +1,6 @@
 // In this chapter we will be creating our very first web server using Node JS which will be capable of handling requests and sending responses.
 
-// For creating a web server we will be using the http module which is a core module of Node JS.
+// For creating a web server, we will be using the "http" module which is a core module of Node JS.
 
 // For using the http module we will have to require it in our file.
 // const http = require('http')
@@ -47,7 +47,7 @@
 // The port numbers from 1024 to 49151 are reserved for user processes.
 // The port numbers from 49152 to 65535 are reserved for private processes.
 
-// Now lets run the file in the terminal using the command node 07_creating_web_server.js
+// Now lets run the file in the terminal using the command node app.js
 // We will get the following output:
 // Server started on port 8000
 
@@ -73,7 +73,7 @@
 // We can stop the server by pressing ctrl + c in the terminal.
 
 // Now let us send a response to the client.
-// Right now when we are making a request to the server, and we can see in the browser that nothing is displayed.
+// Right now when we are making a request to the server, we can see in the browser that nothing is displayed.
 // This is because we are not sending any response to the client and are only logging a message in the terminal.
 // To send a response, we can use end() method of the response object.
 // The end() method takes a string as a parameter.
@@ -209,17 +209,21 @@
 
 
 // Task 5:
-// Get the headers of the request and send it as a response to the client.
+// Create a web server with 6000 port and send some data as json to the client.
 // Solution:
+
 // const http = require('http');
 
 // const server = http.createServer((req, res) => {
-//     const headers = req.headers;
-//     res.end(headers);
+//     const data = {
+//         name: "John",
+//         age: 24
+//     };
+//     res.end(JSON.stringify(data));
 // });
 
-// server.listen(5000, () => {
-//     console.log("Server started on port 5000");
+// server.listen(6000, () => {
+//     console.log("Server started on port 6000");
 // });
 
 
