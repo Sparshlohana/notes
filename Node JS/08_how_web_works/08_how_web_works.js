@@ -5,7 +5,7 @@
 // If you know how web actually works, it will be easy for you to understand backend.
 
 // In the web, we have a client and a server.
-// And let us assume that in the server we are hosting three applications:
+// And let us assume that, in the server we are hosting three applications:
 // 1. Node JS application
 // 2. Java application
 // 3. Php application
@@ -42,7 +42,7 @@
 // GET is used to get data from the server.
 // POST is used to create data on the server.
 // PUT is used to update data on the server (PUT is used to update the entire resource).
-// PATCH is used to update data on the server (PATCH is used to update a part of the resource).
+// PATCH is also used to update data on the server (PATCH is used to update a part of the resource).
 // DELETE is used to delete data from the server.
 
 // There are other methods as well but we will be talking about them later.
@@ -57,7 +57,7 @@
 
 // Please keep in mind that we do not have control over the request we are sending like what format the request should be in, what headers should be there, etc. All these things are handled by the browser.
 
-// We also have something known as https. Https stands for Hypertext Transfer Protocol Secure. It is the same as http but it is secure. It means that the data that we send to the server is encrypted. And it is used when we have to send sensitive data to the server like passwords, credit card information, etc.
+// We also have something known as https. Https stands for Hypertext Transfer Protocol Secure. It is same as http but it is secure. It means that the data that we send to the server is encrypted. And it is used when we have to send sensitive data to the server like passwords, credit card information, etc.
 // The main difference between http and https is that in https, the data is encrypted using something known as SSL (Secure Sockets Layer) or TLS (Transport Layer Security) before sending it to the server. And then the server will decrypt the data and then process the request.
 
 // Now that we have sent the request to the server, the server will process the request and then send back a http response to the client. Http response also contains a lot of information like the status code, the headers and the body of the response.
@@ -65,7 +65,7 @@
 // The headers are the meta data about the response. For example: the type of the browser, the type of the operating system, etc.
 // The body of the response is the data that we get from the server. For example: the html, css, javascript, images, etc.
 
-// It is the work of backend developers toto make sure that the server is sending the correct response to the client.
+// It is the work of backend developers to make sure that the server is sending the correct response to the client.
 
 // When the browser receives the response, it will receive the html, css, javascript, images, etc. Browser will parse the html and render it on the screen. And then it will parse the css and apply the styles to the html. And then it will parse the javascript and execute it.
 
