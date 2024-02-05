@@ -2,16 +2,16 @@
 // We even say that if we type http://localhost:8000/about or http://localhost:8000/contact in the browser, we will still get the same output as we got for http://localhost:8000/ as we have not defined any routes for /about and /contact.
 // No matter what URL we type in the browser, we will always get the same output as we have not defined any routes.
 
-const http = require('http');
+// const http = require('http');
 
-const server = http.createServer((req, res) => {
-    res.end('Hello from the server');
-    console.log("Request received");
-});
+// const server = http.createServer((req, res) => {
+//     res.end('Hello from the server');
+//     console.log("Request received");
+// });
 
-server.listen(8000, () => {
-    console.log("Server is running on port 8000");
-});
+// server.listen(8000, () => {
+//     console.log("Server is running on port 8000");
+// });
 
 // Here, whenever the server will get request, it will send the response as "Hello from the server" and also print "Request received" in the console and routes won't matter here cause, we have made the server to respond with the same output for all the URLs as we are only sending one response to the client.
 // This is not the behavior we want in our node application. We want to send different responses to different URLs.
@@ -156,7 +156,7 @@ server.listen(8000, () => {
 
 
 // Task 3
-// Create a node application which sends the creates a file.txt for the route that the user enters in the browser. For example, if the user enters http://localhost:8000/about in the browser, the file should be created as about.txt and the content of the file should be "Hello from the about page", and if the user enters http://localhost:8000/contact in the browser, the file should be created as contact.txt and the content of the file should be "Hello from the contact page", it should be dynamic, if user enters any route, the file should be created with the name of the route that user entered and the content of the file should be "Hello from the route - 'user entered route' page". It should be dynamic
+// Create a node application which creates a file.txt for the route that the user enters in the browser. For example, if the user enters http://localhost:8000/about in the browser, the file should be created as about.txt and the content of the file should be "Hello from the about page", and if the user enters http://localhost:8000/contact in the browser, the file should be created as contact.txt and the content of the file should be "Hello from the contact page", it should be dynamic, if user enters any route, the file should be created with the name of the route that user entered and the content of the file should be "Hello from the route - 'user entered route' page". It should be dynamic
 // Solution
 // const http = require('http');
 // const fs = require('fs');
@@ -181,29 +181,29 @@ server.listen(8000, () => {
 // Task 4
 // Create an infinite number of files which named as the same as user entered route.
 // Solution
-// const http = require('http');
-// const fs = require('fs');
+const http = require('http');
+const fs = require('fs');
 
-// const server = http.createServer((req, res) => {
-//     const url = req.url;
-//     const file = url.slice(1) + '.txt';
-//     fs.writeFile(file, `Hello from the ${url.slice(1)} page`, (err) => {
-//         if (err) {
-//             res.end('Error occurred');
-//         } else {
-//             res.end('File created');
-//         }
-//     });
-// });
+const server = http.createServer((req, res) => {
+    const url = req.url;
+    const file = url.slice(1) + '.txt';
+    fs.writeFile(file, `Hello from the ${url.slice(1)} page`, (err) => {
+        if (err) {
+            res.end('Error occurred');
+        } else {
+            res.end('File created');
+        }
+    });
+});
 
 
-// server.listen(8000, () => {
-//     console.log("Server is running on port 8000");
-// });
+server.listen(8000, () => {
+    console.log("Server is running on port 8000");
+});
 
 
 // Task 5
-// Create a node application which sends the creates a file.txt for the route that the user enters and the route should be the content of file.txt.
+// Create a node application which creates a file.txt for the route that the user enters and the route should be the content of file.txt.
 // Solution
 // const http = require('http');
 // const fs = require('fs');
