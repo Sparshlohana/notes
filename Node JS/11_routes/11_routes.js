@@ -2,23 +2,23 @@
 // We even say that if we type http://localhost:8000/about or http://localhost:8000/contact in the browser, we will still get the same output as we got for http://localhost:8000/ as we have not defined any routes for /about and /contact.
 // No matter what URL we type in the browser, we will always get the same output as we have not defined any routes.
 
-// const http = require('http');
+const http = require('http');
 
-// const server = http.createServer((req, res) => {
-//     res.end('Hello from the server');
-//     console.log("Request received");
-// });
+const server = http.createServer((req, res) => {
+    res.end('Hello from the server');
+    console.log("Request received");
+});
 
-// server.listen(8000, () => {
-//     console.log("Server is running on port 8000");
-// });
+server.listen(8000, () => {
+    console.log("Server is running on port 8000");
+});
 
 // Here, whenever the server will get request, it will send the response as "Hello from the server" and also print "Request received" in the console and routes won't matter here cause, we have made the server to respond with the same output for all the URLs as we are only sending one response to the client.
 // This is not the behavior we want in our node application. We want to send different responses to different URLs.
 
 // We want if the client types http://localhost:8000/about in the browser, we should get the output as "Hello from the about page" and if the client types http://localhost:8000/contact in the browser, we should get the output as "Hello from the contact page" and if the client types http://localhost:8000/ in the browser, we should get the output as "Hello from the server".
 
-// We already know that we hand handle requests by the request object from the callback function of the createServer method.
+// We already know that we handle requests by the request object from the callback function of the createServer method.
 // To get the url of the request, we can use the request object's url property.
 
 // Let's see how we can do this:

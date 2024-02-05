@@ -1,4 +1,4 @@
-// In the previous chapters, we have already learned how to create a basic node js server using http module. In this chapter, we will learn how to create routes in node js.
+// In the previous chapters, we have already learned how to create a basic node js server using http module. In this chapter, we will be studying about routing in node js.
 
 // We can even replace http://localhost:8000/ to http://127.0.0.1:8000/ in the browser to get the same output and vice versa. Both are same only.
 
@@ -16,7 +16,7 @@ server.listen(8000, () => {
 // What is root URL?
 // The root URL is the URL that goes to the root of your website. For example, if you have a website called www.example.com, then the root URL is www.example.com.
 // The root url will be the domain name of the website.
-// In out case, as our node application is running on local server the root url will be http://localhost:8000/ or http://127.0.0.1:8000/
+// In our case, as our node application is running on local server the root url will be http://localhost:8000/ or http://127.0.0.1:8000/
 
 // If we enter the url as http://localhost:8000/about in the browser, we will still get the same output as we got for http://localhost:8000/ as we have not defined any routes for /about.
 // And if we enter the url as http://localhost:8000/contact in the browser, we will still get the same output as we got for http://localhost:8000/ as we have not defined any routes for /contact.
@@ -45,7 +45,7 @@ server.listen(8000, () => {
 // So we can say that, we can make our application to respond to different URLs with different responses using routing.
 
 // Routing basically means implementing different actions for different URLs.
-// These actions can be implemented using different ways example creating functions, creating files etc.
+// These actions can be implemented using different ways example creating functions, creating files, etc.
 
 // We will learn how to create routes in node js in the next chapter.
 
@@ -55,10 +55,10 @@ server.listen(8000, () => {
 // Based on the id of the user, we can send that particular user's data as a response to the client.
 
 // Let us understand this with an example.
-// If we have http://localhost:8000/books/si-fi/7,
-// Here, http://localhost:8000 is the root url, /books is the resource, /si-fi/7 are the parameters.
-// Based on the parameters, we can send the data of the book with the genre si-fi and id 7 as a response to the client.
-// Here si-fi is the genre of the book and 7 is the id of the book.
+// If we have http://localhost:8000/books/sci-fi/7,
+// Here, http://localhost:8000 is the root url, /books is the resource, /sci-fi/7 are the parameters.
+// Based on the parameters, we can send the data of the book with the genre sci-fi and id 7 as a response to the client.
+// Here sci-fi is the genre of the book and 7 is the id of the book.
 
 // We also have something known as query parameters.
 // A query parameter is a key value pair that is sent in the URL.
