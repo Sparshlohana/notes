@@ -181,25 +181,25 @@
 // Task 4
 // Create an infinite number of files which named as the same as user entered route.
 // Solution
-const http = require('http');
-const fs = require('fs');
+// const http = require('http');
+// const fs = require('fs');
 
-const server = http.createServer((req, res) => {
-    const url = req.url;
-    const file = url.slice(1) + '.txt';
-    fs.writeFile(file, `Hello from the ${url.slice(1)} page`, (err) => {
-        if (err) {
-            res.end('Error occurred');
-        } else {
-            res.end('File created');
-        }
-    });
-});
+// const server = http.createServer((req, res) => {
+//     const url = req.url;
+//     const file = url.slice(1) + '.txt';
+//     fs.writeFile(file, `Hello from the ${url.slice(1)} page`, (err) => {
+//         if (err) {
+//             res.end('Error occurred');
+//         } else {
+//             res.end('File created');
+//         }
+//     });
+// });
 
 
-server.listen(8000, () => {
-    console.log("Server is running on port 8000");
-});
+// server.listen(8000, () => {
+//     console.log("Server is running on port 8000");
+// });
 
 
 // Task 5
