@@ -36,7 +36,7 @@
 //     console.log('Server is running at port 8000');
 // });
 
-// Here, you can notice that we are reading the fruits.json file using the fs module, then we are using the async readFile method to read the file, and then we are sending the data to the client using the res.write method.
+// Here, you can notice that we are reading the fruits.json file using the fs module, then we are using the async readFile method to read the file, and then we are sending the data to the client using the res.end method.
 // Notice that for sending json data, we are using the 'application/json' content type.
 
 // When we are creating a web application, we generally do not send json data. We send html data at that time, but when we are creating apis, we send json data.
