@@ -1,0 +1,82 @@
+[
+    {
+        "id": 1,
+        "name": "Apple",
+        "color": "Red",
+        "taste": "Sweet",
+        "description": "A popular fruit with a sweet taste.",
+        "price": 0.5
+    },
+    {
+        "id": 2,
+        "name": "Banana",
+        "color": "Yellow",
+        "taste": "Sweet",
+        "description": "A curved fruit with a sweet taste.",
+        "price": 0.25
+    },
+    {
+        "id": 3,
+        "name": "Orange",
+        "color": "Orange",
+        "taste": "Citrus",
+        "description": "A citrus fruit with a tangy taste.",
+        "price": 0.75
+    },
+    {
+        "id": 4,
+        "name": "Grapes",
+        "color": "Purple",
+        "taste": "Sweet",
+        "description": "A small, juicy fruit.",
+        "price": 0.35
+    },
+    {
+        "id": 5,
+        "name": "Watermelon",
+        "color": "Green",
+        "taste": "Sweet",
+        "description": "A large, refreshing fruit.",
+        "price": 1.5
+    },
+    {
+        "id": 6,
+        "name": "Mango",
+        "color": "Yellow",
+        "taste": "Sweet",
+        "description": "A tropical fruit with a rich flavor.",
+        "price": 1.0
+    },
+    {
+        "id": 7,
+        "name": "Pineapple",
+        "color": "Yellow",
+        "taste": "Tangy",
+        "description": "A spiky fruit with a sweet and tangy taste.",
+        "price": 0.9
+    },
+    {
+        "id": 8,
+        "name": "Strawberry",
+        "color": "Red",
+        "taste": "Sweet",
+        "description": "A small, juicy fruit with a sweet flavor.",
+        "price": 0.3
+    },
+    {
+        "id": 9,
+        "name": "Kiwi",
+        "color": "Green",
+        "taste": "Tangy",
+        "description": "A small fruit with a fuzzy brown exterior and a tangy taste.",
+        "price": 0.6
+    },
+    {
+        "id": 10,
+        "name": "Peach",
+        "color": "Orange",
+        "taste": "Sweet",
+        "description": "A soft fruit with a sweet and juicy flesh.",
+        "price": 0.8
+    }
+]
