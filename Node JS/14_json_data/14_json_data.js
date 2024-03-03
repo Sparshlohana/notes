@@ -171,8 +171,8 @@
 
 //     const fruitsDataMapped = fruitsData.map((item, index) => {
 //         let output = fruitsPage.replace('{{%TITLE%}}', item.name);
-//         output = fruitsPage.replace('{{%COLOR%}}', item.color);
-//         output = fruitsPage.replace('{{%TASTE%}}', item.taste);
+//         output = output.replace('{{%COLOR%}}', item.color);
+//         output = output.replace('{{%TASTE%}}', item.taste);
 
 //         return output;
 //     })
@@ -226,7 +226,6 @@
 // server.listen(8000, () => {
 //     console.log('Server is running at port 8000');
 // });
-
 
 // This is how we can display the json data on the web page.
 

@@ -124,7 +124,7 @@
 //     const contact = fs.readFileSync(`${__dirname}/contact/contact.html`);
 
 //     if (url === '/') {
-//         res.end(navBarHtml));
+//         res.end(navBarHtml);
 //     } else if (url === '/about') {
 //         res.end(about);
 //     } else if (url === '/contact') {
