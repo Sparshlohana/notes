@@ -161,7 +161,7 @@
 //             res.end(`The fruit with id ${query.id} is ${fruitsData[query.id - 1].name}`);
 //         } else {
 //             res.writeHead(200, { 'Content-Type': 'text/html' });
-//             res.end(fruitsDataMapped.join(','));
+//             res.end(fruitsDataMapped.join(''));
 //         }
 //     } else {
 //         res.writeHead(404, { 'Content-Type': 'text/html' });
