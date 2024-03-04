@@ -1,18 +1,18 @@
 // What is a query string?
 // A query string is a part of a URL that contains data to be passed to web servers. It is a set of key-value pairs, where each key is associated with a value.
-// The query string is usually used to pass data to web pages.
-// It is a part of the URL after the question mark(?).The query string is separated from the URL using a question mark (?), and the key - value pairs are separated from each other using an ampersand (&).
+// The query string is usually used to pass data to web servers.
+// It is a part of the URL after the question mark(?). The query string is separated from the URL using a question mark (?), and the key - value pairs are separated from each other using an ampersand (&).
 
-// Lets take an example, in the previous chapter, we have created a server that sends fruits data to the client. We were using http://localhost:3000/fruits to get the data. Now, we will use query string to get the data.
+// Lets take an example, in the previous chapter, we have created a server that sends fruits data to the client. We were using http://localhost:8000/fruits to get the data. Now, we will use query string to get the data.
 
 // Let us assume we want the fruits with id 2, then we can use the following URL to get the data.
-// http://localhost:3000/fruits?id=2
+// http://localhost:8000/fruits?id=2
 
 // Now let us assume we want the fruits with color as yellow, then we can use the following URL to get the data.
-// http://localhost:3000/fruits?color=yellow
+// http://localhost:8000/fruits?color=yellow
 
 // In the above examples, the query string is id=2 and color=yellow. The key is id and color, and the value is 2 and yellow. The key-value pairs are separated from each other using an ampersand (&). The url will be:
-// http://localhost:3000/fruits?id=2&color=yellow
+// http://localhost:8000/fruits?id=2&color=yellow
 
 // We already know how to get the url from the request object by using req.url.
 // Now we want to pass the query string to the server. We can use the url module to parse the url and get the query string and its values. To do that we need to import the url module which is a built-in/core module in Node.js.
