@@ -80,7 +80,7 @@ server.on('request', (req, res) => {
 
 // The Event Emitting and Event Listening logic is called as Observer Pattern in javascript programming in general.
 // So the idea here is, there is an observer (in this case, an event listener) that keeps waiting/observing for the event to happen that the listener is interested in. The subject (in this case, the event emitter) is the one that is going to emit the event and the observer is going to react to it.
-// The opposite of this pattern is is simply the function calling other function which is something that we have been doing all along in our code. But the observer pattern is a bit more advanced and it is a very important pattern in javascript programming in general. It is used in many other places in javascript programming as well. So, it is a good idea to understand this pattern well.
+// The opposite of this pattern is simply the function calling other function which is something that we have been doing all along in our code. But the observer pattern is a bit more advanced and it is a very important pattern in javascript programming in general. It is used in many other places in javascript programming as well. So, it is a good idea to understand this pattern well.
 
 // The observer pattern is designed to react rather than to call, that is because there is a huge benefits of using this architecture which is the fact that everything is more decoupled and more flexible. So, it is a good idea to use this pattern whenever we can.
 
