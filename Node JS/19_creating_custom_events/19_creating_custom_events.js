@@ -1,5 +1,5 @@
 // To work with events in node js, you need to import the events module
-// It is a core module/ built-in module of node js.
+// It is a core module/built-in module of node js.
 // To import the events module, you can use the require() method.
 // const events = require('events');
 
@@ -8,7 +8,7 @@
 
 // let eventEmitter = new events.EventEmitter();
 // Here eventEmitter is an instance of EventEmitter class.
-// In the last lecture we learned that an event emitter also emits some named events and when that event is emitted, we can listen to those events.
+// In the last chapter we learned that an event emitter also emits some named events and when that event is emitted, we can listen to those events.
 
 // Using the eventEmitter instance, we can emit events and listen to those events.
 // eventEmitter.emit('userCreated');
