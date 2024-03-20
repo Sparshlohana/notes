@@ -23,14 +23,14 @@
 
 // But with the help of streams, we can process data piece by piece instead of reading or writing the entire data at once. Therefore, we don't need to store the entire data in the memory. We can process the data piece by piece and we can write the data piece by piece.
 
-// For example, we want to read a file in streams, we can use the fs.readStream method. This readStream method will read the content of the source file. To do that, again a read buffer will be created where the content will be readd first. Think of this read buffer as the memory in your system where the content which we are reading in the source file will be stored. Since we are using the stream here, in between the source file and the read buffer, there will be a read stream which will be created, and using this stream, instead of reading all the content at once, we can read the content piece by piece/chunk by chunk. By using streaming, all the data is not stored in memory at once. We are reading a chunk, we are storing it in the memory and we are using it and then we are freeing the memory. Then we are reading another chunk and we are storing it in the memory and we are using it and then we are freeing the memory. This is how streaming works. This process is repeated until the entire file is processed. This is what stream is.
+// For example, we want to read a file in streams, we can use the fs.readStream method. This readStream method will read the content of the source file. To do that, again a read buffer will be created where the content will be read first. Think of this read buffer as the memory in your system where the content which we are reading in the source file will be stored. Since we are using the stream here, in between the source file and the read buffer, there will be a read stream which will be created, and using this stream, instead of reading all the content at once, we can read the content piece by piece/chunk by chunk. By using streaming, all the data is not stored in memory at once. We are reading a chunk, we are storing it in the memory and we are using it and then we are freeing the memory. Then we are reading another chunk and we are storing it in the memory and we are using it and then we are freeing the memory. This is how streaming works. This process is repeated until the entire file is processed. This is what a stream is.
 
 // Think of youtube and netflix, they are both called streaming services. They stream videos using the same principle. Here, processing is done piece by piece. The video is not downloaded at once, it is downloaded piece by piece and then it is played. Video is processed in chunks so that you can start watching videos even before the entire video is downloaded. This principle does not only apply to node js. It is common in computer science in general.
 // This makes stream the perfect choice for reading and writing large files. Example, for streaming live videos, live matches, live events, or creating a streaming service like youtube or netflix and also for the data we are receiving piece by piece from an external source.
 
 // Advantages of using streams:
 // Streaming makes the data processing faster and efficient in terms of memory. Because there is no need to keep all the data in the memory at once.
-// In terms of performance and time also, streaming has its advantage because we can start processing the data as soon as the first chunks arrives.
+// In terms of performance and time also, streaming has its advantage because we can start processing the data as soon as the first chunk arrives.
 
 // Now we know what streams are, lets see how to implement streams in Node.js.
 
@@ -44,7 +44,7 @@
 // We will also talk about duplex and transform streams in high level later.
 
 // Readable streams
-// The readable streams are the one from where we can lead or consume data chunk by chunk.
+// The readable streams are the one from where we can read or consume data chunk by chunk.
 // Example: Request streams, Read file streams, etc.
 // When we send the request to the server, the server sends the response in chunks. This is an example of a readable stream. When we send a request to the server, a readable stream is opened, through that readable stream, we get the request data in chunks. This means the data is not sent at once, it is sent in chunks.
 // Another example is reading a file. When we read a file using the fs.readStream method, the file is read in chunks. This is also an example of a readable stream.
@@ -66,7 +66,7 @@
 // The writable streams are the one to which we can write data chunk by chunk. It's the opposite of readable streams.
 
 // Example: Response streams, Write file streams, etc.
-// When we send a request to the server, the server sends the response in chunks. This is an example of a writable stream. When we send a request to the server, a writable stream is opened, through that writable stream, we send the request data in chunks. This means the data is not sent at once, it is sent in chunks.
+// When we send a request to the server, the server sends the response in chunks. This is an example of a writable stream. When we send a request to the server, a writable stream is opened, through that writable stream, we send the response data in chunks. This means the data is not sent at once, it is sent in chunks.
 // Another example is writing a file. When we write a file using the fs.writeStream method, the file is written in chunks. This is also an example of a writable stream.
 // If we want to sent a video to the client, we can use a writable stream to send the video in chunks just like Netflix and Youtube.
 
@@ -135,7 +135,7 @@
 //         res.end();
 //     });
 
-//     res.on('error', (err) => {
+//     rs.on('error', (err) => {
 //         res.end(err.message);
 //     });
 // });
@@ -146,7 +146,7 @@
 // But here you can notice that only the first chunk of data is being sent to the client and then the response is ending.
 // Thats not what we want. We want to send the entire file to the client.
 
-// We have already learned that we have to main functions to work with streams, the pipe and read functions and the read function has 2 main events, the data and end events.
+// We have already learned that we have 2 main functions to work with streams, the pipe and read functions and the read function has 2 main events, the data and end events.
 
 // const server = require('http').createServer();
 // const fs = require('fs');

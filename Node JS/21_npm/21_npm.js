@@ -12,7 +12,7 @@
 
 // The site for npm registry is https://www.npmjs.com/
 // The npm registry site is the largest public software registry in the world. It has over 1.3 million packages of open-source code.
-// Example: In the upcoming chapters, we are going to use a package called express which is also known as express.js. It is a web application framework for node js. We can install it using npm.
+// Example: In the upcoming chapters, we are going to use a package called express which is also known as express.js. It is an application framework for node js. We can install it using npm.
 // The express package is available at this npm registry site. We can search for it and install it using npm.
 
 // Lets go on the npm registry site and search for express package and press enter.
