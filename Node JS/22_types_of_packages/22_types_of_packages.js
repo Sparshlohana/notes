@@ -1,5 +1,5 @@
 // Lets understand what are the different categories in which we can divide a package.
-// When we install a package, it can be classified into a Regular dependency and a Development dependency.
+// When we install a package, it can be classified into a Regular dependency or a Development dependency.
 
 // Regular dependency
 // A package is called as a simple or regular dependency if the working of our application or the code which we are writing, depends on that package.
@@ -16,7 +16,7 @@
 // We'll be installing express package as a regular dependency.
 // For that, we'll go to the terminal and type the command npm install express
 // Here, npm install is the command to install a package. And express is the package name.
-// If you want to specify the version of the package, you can do that by typing npm install express@version
+// If you want to specify the version of the package, you can do that by typing npm install package@version
 // Example: npm install express@4
 // If you want to install the latest version of the package, you can do that by typing npm install express
 
