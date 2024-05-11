@@ -1,12 +1,12 @@
 // Event loop is the heart of Node JS.
 
-// In the previous chapter, we learned, when the execution of node js code starts. It starts with process inside which we get a single thread. In that single thread, all the node js code gets executed.
-// The asynchronous methods provided by node js, they are handed to a thread in the thread pool amd in that thread, the asynchronous code gets executed. The thread of the thread pool is different from the main thread of the node js.
+// In the previous chapter, we learned, when the execution of node js code starts, it starts with process inside which we get a single thread. In that single thread, all the node js code gets executed.
+// The asynchronous methods provided by node js, they are handed to a thread in the thread pool and in that thread, the asynchronous code gets executed. The thread of the thread pool is different from the main thread of the node js.
 
 // So please remember that, all the top level code of node js gets executed in the main thread of node js. But the asynchronous code gets executed in the thread pool.
 
-// Event loop is where all the callbacks functions wait for their execution. And when the main thread is empty, the event pushes the callback function from the callback queue to the main thread for execution.
-// If the callback function is going to do some heave tasks like file reading and compression, then that callback function will be offloaded to the thread in the thread pool for execution. That callback function will not be executed in the main thread.
+// Event loop is where all the callbacks functions wait for their execution. And when the main thread is empty, the event loop pushes the callback function from the callback queue to the main thread for execution.
+// If the callback function is going to do some heavy tasks like file reading and compression, then that callback function will be offloaded to the thread in the thread pool for execution. That callback function will not be executed in the main thread.
 
 // Node js uses event driven architecture. It means, it is build around callback functions. We use callback functions a lot in node js.
 
@@ -19,7 +19,7 @@
 // It will wait for the completion of the current execution of the main thread.
 // When all the code in the main thread is executed, and main thread is empty, then the event loop will push the callback function from the callback queue to the main thread for execution.
 
-// Event loop has multiple phases. Each phase has its own callback queue. The callback queue is also called as the task queue. In some articles, you will see that there is only one callback queue. But in reality, there are multiple callback queues. Each phase has its own callback queue.
+// Event loop has multiple phases. Each phase has its own callback queue. The callback queue is also called as the task queue. In some articles, you will see that there is only one callback queue. But in reality, there are multiple callback queues.
 
 // Let us understand with example.
 const fs = require("fs");
@@ -109,6 +109,6 @@ socket.on('close', () => {
 
 // What not to do to avoid blocking of main thread?
 // Do not use sync versions of functions in fs, crypto, zlib modules inside a callback function.
-// Do not perform where complex calculations inside a callback function.
+// Do not perform complex calculations inside a callback function.
 // Be careful with JSON which has a large number of JSON objects.
 // Don't use to complex regular expressions (regex) inside a callback function.
