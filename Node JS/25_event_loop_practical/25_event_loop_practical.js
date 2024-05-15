@@ -110,6 +110,49 @@
 
 
 // Lets modify our program.
+// const fs = require('fs');
+// console.log('Start');
+
+// // Stores in second phase of event loop
+// fs.readFile(`${__dirname}/input.txt`, 'utf-8', (err, data) => {
+//     console.log(data);
+
+//     // Stores in first phase of event loop
+//     setTimeout(() => {
+//         console.log('Timer');
+//     }, 0);
+
+//     // Stores in third phase of event loop
+//     setImmediate(() => {
+//         console.log('Immediate');
+//     });
+// });
+
+// console.log('End');
+
+// Firstly, the top level code will be executed. So the first output will be "Start" and the second output will be "End". Now we don't have any more top level code to execute. So the event loop will start. When the event loop starts, it will go to the first phase, at the top level, we don't have any timer related tasks. SO we can say that first phase is empty.
+// Now the event loop will move to the second phase.
+// Lets say that by that time, readfile has completed its job. So the callback function of the I/O operation will be pushed to the callback queue of the second phase of event loop. Since event loop is on 2nd phase, it will push the callback function of I/O operation to the main thread for execution.
+// In the main thread, the callback function of I/O operation will be executed.
+// First it will log the content of the input.txt file. So the next output will be the File read successfully
+// Then it will move to the next line, in that line, we are using setTimeout function. We already know that setTimeout is an asynchronous function. It will execute in the background. Since the timer is 0, it will expire immediately. The callback function of setTimeout will be pushed to the callback queue of the first phase of event loop.
+// Then the next line of code is setImmediate function. It will also expire immediately. Callback function of setImmediate will be pushed to the callback queue of the third phase of event loop.
+// Event loop will now move to the third phase. In the third phase, it will find the callback function of setImmediate waiting for its execution. So it will push that callback function to the main thread for execution.
+// So the next output will be "Immediate".
+// Now the event loop will move to the fourth phase. In the fourth phase, we don't have any close callbacks. So this phase will be empty.
+// Now one tick of event loop is completed.
+// Now event loop will check, if there are any timer related tasks or I/O related tasks waiting for its execution. Now our setTimeout function is waiting for its execution.
+// Event loop will start the next tick. It will go to the first phase of event loop. In the first phase of event loop, it will find the callback function of setTimeout waiting for its execution. So it will push that callback function to the main thread for execution.
+// So the next output will be "Timer".
+// So the final output will be:
+// Start
+// End
+// File read successfully
+// Immediate
+// Timer
+
+// We already know about next tick queue and microtask queue. Lets see how they work.
+// Lets add a process.nextTick() function in the code.
 const fs = require('fs');
 console.log('Start');
 
@@ -126,6 +169,29 @@ fs.readFile(`${__dirname}/input.txt`, 'utf-8', (err, data) => {
     setImmediate(() => {
         console.log('Immediate');
     });
+
+    // Stores in next tick queue
+    process.nextTick(() => {
+        console.log('Next Tick');
+    });
 });
 
 console.log('End');
+
+// Firstly, the top level code will be executed. So the first output will be "Start" and the second output will be "End". Now we don't have any more top level code to execute. So the event loop will start. When the event loop starts, it will go to the first phase, at the top level, we don't have any timer related tasks. SO we can say that first phase is empty.
+// Now the event loop will move to the second phase.
+// Lets say that by that time, readfile has completed its job. So the callback function of the I/O operation will be pushed to the callback queue of the second phase of event loop. Since event loop is on 2nd phase, it will push the callback function of I/O operation to the main thread for execution.
+// In the main thread, the callback function of I/O operation will be executed.
+// First it will log the content of the input.txt file. So the next output will be the File read successfully
+// Then it will move to the next line, in that line, we are using setTimeout function. We already know that setTimeout is an asynchronous function. It will execute in the background. Since the timer is 0, it will expire immediately. The callback function of setTimeout will be pushed to the callback queue of the first phase of event loop.
+// Then the next line of code is setImmediate function. It will also expire immediately. Callback function of setImmediate will be pushed to the callback queue of the third phase of event loop.
+// Then the next line of code is process.nextTick() function. It will be pushed to the next tick queue.
+// Now the 2nd phase of event loop is completed. As we already know that next tick queue is executed after the completion of the current phase of event loop. So the next tick queue will be executed after the completion of the second phase of event loop.
+// So the next output will be "Next Tick".
+// Now the event loop will move to the third phase. In the third phase, it will find the callback function of setImmediate waiting for its execution. So it will push that callback function to the main thread for execution.
+// So the next output will be "Immediate".
+// Now the event loop will move to the fourth phase. In the fourth phase, we don't have any close callbacks. So this phase will be empty.
+// Now one tick of event loop is completed.
+// Now event loop will check, if there are any timer related tasks or I/O related tasks waiting for its execution. Now our setTimeout function is waiting for its execution.
+// Event loop will start the next tick. It will go to the first phase of event loop. In the first phase of event loop, it will find the callback function of setTimeout waiting for its execution. So it will push that callback function to the main thread for execution.
+// So the next output will be "Timer".
