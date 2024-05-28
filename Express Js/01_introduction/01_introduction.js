@@ -18,7 +18,7 @@
 // 8. REST API: It helps to create REST APIs.
 // 9. Authentication: It helps to implement authentication.
 // 10. Session: It helps to manage the session, etc.
-// Express allows us to write node js applications faster and simpler. Provides a lot of built-in functionalities that help us to write less code and achieve more functionalities.
+// Express allows us to write code for node js applications faster and simpler. Provides a lot of built-in functionalities that help us to write less code and achieve more functionalities.
 // With Express Js, we can also organize our code in MVC (Model-View-Controller) architecture which makes it easy to maintain and understand the code.
 
 // Lets start our first Express Js application.
@@ -34,7 +34,7 @@
 // After initializing the project, we need to install the express module. We can do it by using the npm install express command.
 // npm install express
 
-// Once the package is installed, you can see in the package
+// Once the package is installed, you can see in the package in package.json file.
 // Express is going to be regular dependency of out projects.
 // The code we are going to write depends on express package.
 // A folder called node_modules has been created in the root directory of the project. This folder contains all the dependencies of the project.
