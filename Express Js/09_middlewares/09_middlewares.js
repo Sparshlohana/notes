@@ -35,3 +35,193 @@
 // And in this way, the req res cycle is finished for that particular client request
 
 // This is how a middleware works in express js.
+
+// Lets create our own middleware function in express js.
+// We already know that we can use express.json() middleware to parse the request body and to use a middleware, we use app.use() method.
+
+// Lets create a middleware function called logger.
+// To create a middleware function, we need to create a function which takes three arguments, req, res and next.
+// We can name these arguments anything, but these are the standard names which we use.
+// So lets create a middleware function called logger.
+// const logger = (req, res, next) => { };
+
+// In this logger function, we are just going to log a message to the console.
+// const logger = (req, res, next) => {
+//     console.log("Hello from the middleware function");
+// }
+
+// Now to use this middleware, we need to use app.use() method.
+// const express = require("express");
+// const app = express();
+
+// const logger = (req, res, next) => {
+//     console.log("Hello from the middleware function");
+// }
+
+// app.use(express.json());
+// app.use(logger);
+
+// app.get("/api/movies", (req, res) => {
+//     res.status(200).send("Hello from the movies route");
+// });
+
+// app.listen(8000, () => {
+//     console.log("Server is running on port 8000");
+// });
+
+// Here what will happen is, when any request is made to the server, the first middleware which will be executed is express.json() middleware which will attach the request body to the request object.
+// Then the next middleware which will be executed is the logger middleware which will log the message to the console.
+// After that, there is an issue, We are not getting any response back to the client. This is because we have not called the next function in the logger middleware.
+// So we need to call the next function in the logger middleware.
+// const express = require("express");
+// const app = express();
+
+// const logger = (req, res, next) => {
+//     console.log("Hello from the middleware function");
+//     next();
+// }
+
+// app.use(express.json());
+// app.use(logger);
+
+// app.get("/api/movies", (req, res) => {
+//     res.status(200).send("Hello from the movies route");
+// });
+
+// app.listen(8000, () => {
+//     console.log("Server is running on port 8000");
+// });
+
+// Now when we run this code, we will get the message from the logger middleware and also the response from the movies route.
+
+// Keep in mind that, these middlewares which we have created are global middlewares. These middlewares will be executed for all the requests which are made to the server.
+// But we can also create middlewares which are specific to a particular route.
+
+// We already studied that, route handler functions are also middlewares but they are only called when a particular route is hit by the client but the middleware which we use in app.use() method are global middlewares. They are applied to all the routes.
+
+// We even studied that, the order of the middlewares in the code matters a lot. The order in which they are defined in the code is the order in which they will be executed. If we move the logger middleware after the route handler function, then the logger middleware will not be executed because the response will be sent back to the client before the logger middleware is executed. Lets see this in code.
+// const express = require("express");
+// const app = express();
+
+// const logger = (req, res, next) => {
+//     console.log("Hello from the middleware function");
+//     next();
+// }
+
+// app.use(express.json());
+
+// app.get("/api/movies", (req, res) => {
+//     res.status(200).send("Hello from the movies route");
+// });
+
+// app.use(logger);
+
+// app.listen(8000, () => {
+//     console.log("Server is running on port 8000");
+// });
+// When we now hit the request to the server, we will not get the message from the logger middleware because the logger middleware is defined after the route handler function.
+
+// We can even define a middleware directly in the app.use() method. We do not need to create a separate function for that. Lets see this in code.
+// Let's attach requestedTime to the request object.
+// const express = require("express");
+// const app = express();
+
+// app.use(express.json());
+// app.use((req, res, next) => {
+//     req.requestedTime = new Date().toISOString();
+//     next();
+// });
+
+// app.get("/api/movies", (req, res) => {
+//     res.status(200).json({
+//         requestedTime: req.requestedTime,
+//         message: "Hello from the movies route"
+//     });
+// });
+
+// app.listen(8000, () => {
+//     console.log("Server is running on port 8000");
+// });
+
+// Now when we hit the request to the server, we will get the requestedTime attached to the request object.
+
+// Task 1
+// Create a middleware function which generates a random number between 1 and 100 and attach it to the request object. Then send this random number back to the client in the response.
+// Solution
+// const express = require("express");
+// const app = express();
+
+// app.use(express.json());
+// app.use((req, res, next) => {
+//     req.randomNumber = Math.floor(Math.random() * 100) + 1;
+//     next();
+// });
+
+// app.get("/api/movies", (req, res) => {
+//     res.status(200).json({
+//         randomNumber: req.randomNumber,
+//         message: "Hello from the movies route"
+//     });
+// });
+
+// app.listen(8000, () => {
+//     console.log("Server is running on port 8000");
+// });
+
+
+// Task 2
+// Create a middleware function which checks if the request body contains a name property. If it does not contain a name property, then send a response back to the client with status code 400 and message "Name is required".
+// Solution
+// const express = require("express");
+// const app = express();
+
+// const checkName = (req, res, next) => {
+//     if (!req.body.name) {
+//         return res.status(400).json({
+//             message: "Name is required"
+//         });
+//     }
+//     next();
+// }
+
+// app.use(express.json());
+// app.use(checkName);
+
+// app.post("/api/movies", (req, res) => {
+//     res.status(200).json({
+//         message: "Movie added successfully"
+//     });
+// });
+
+// app.listen(8000, () => {
+//     console.log("Server is running on port 8000");
+// });
+
+
+// Task 3
+// Create a middleware function which checks the number if it is even or odd. If the number is even, then attach a property isEven to the request object with value true. If the number is odd, then attach a property isEven to the request object with value false. Then send this property back to the client in the response.
+// Solution
+// const express = require("express");
+// const app = express();
+
+// const checkEvenOdd = (req, res, next) => {
+//     if (req.body.number % 2 === 0) {
+//         req.isEven = true;
+//     } else {
+//         req.isEven = false;
+//     }
+//     next();
+// }
+
+// app.use(express.json());
+// app.use(checkEvenOdd);
+
+// app.post("/api/number", (req, res) => {
+//     res.status(200).json({
+//         isEven: req.isEven
+//     });
+// });
+
+// app.listen(8000, () => {
+//     console.log("Server is running on port 8000");
+// });
