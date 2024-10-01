@@ -1,6 +1,6 @@
 // What are static files?
 // These files are stored in the server and are served as it is to the client.
-// But currently, we cannot excess those files from our routes.
+// But currently, we cannot access those files from our routes.
 
 // Lets create a folder called public in the root directory of the project.
 // Inside public folder, Create another folder called templates.
@@ -8,8 +8,8 @@
 
 // Lets try to access this file from the browser.
 // Open the browser and type the following URL.
-// http://localhost:8000/templates/demo.html
-// You will get an error message saying "Cannot GET /templates/demo.html"
+// http://localhost:8000/public/templates/demo.html
+// You will get an error message saying "Cannot GET /public/templates/demo.html"
 
 // Here, demo.html is a static file, and by default in express, we cannot access static files.
 // Same is true for other types of static files as well, like images, css, js, etc.
