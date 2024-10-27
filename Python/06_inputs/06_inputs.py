@@ -49,8 +49,8 @@
 # Task 2
 # Write a python program to find remainder when a number is divided by z.
 # Solution
-# a = int(input("Enter a number: "))
-# z = int(input("Enter a number to divide by: "))
+# a = float(input("Enter a number: "))
+# z = float(input("Enter a number to divide by: "))
 # print("Remainder when a is divided by z is: ", a % z)
 
 # Task 3
@@ -60,7 +60,7 @@
 # print("Type of a is: ", type(a))
 
 # Task 4
-# Use comparison operator to find out whether a given variable "a" is greater than 'b' or not . Take a = 34 and b = 80.
+# Use comparison operator to find out whether a given variable "a" is greater than 'b' or not. Take a = 34 and b = 80.
 # Solution
 # a = 34
 # b = 80
@@ -74,7 +74,7 @@
 # print("Average of two numbers is: ", (a + b) / 2)
 
 # Task 6
-# Write a python program to calculate the square ot a number entered by the user.
+# Write a python program to calculate the square of a number entered by the user.
 # Solution
 # a = int(input("Enter a number: "))
 # print("Square of a is: ", a ** 2)
