@@ -260,33 +260,6 @@
 # print(friends)
 
 # Task 7
-# Create an empty dictionary. Allow 4 friends to enter their favorite language as value and use key as their names. Assume that the names are unique.
-# Solution
-# friends = {}
-# for i in range(4):
-#     name = input("Enter your name: ")
-#     lang = input("Enter your favorite language: ")
-#     friends[name] = lang
-# print(friends)
-
-# Without using a loop
-
-# friends = {}
-# name1 = input("Enter your name: ")
-# lang1 = input("Enter your favorite language: ")
-# friends[name1] = lang1
-# name2 = input("Enter your name: ")
-# lang2 = input("Enter your favorite language: ")
-# friends[name2] = lang2
-# name3 = input("Enter your name: ")
-# lang3 = input("Enter your favorite language: ")
-# friends[name3] = lang3
-# name4 = input("Enter your name: ")
-# lang4 = input("Enter your favorite language: ")
-# friends[name4] = lang4
-# print(friends)
-
-# Task 8
 # If languages of two friends are same; what will happen to the program in problem 6?
 # Solution
 # If the languages of two friends are the same, the program will work fine. The dictionary will store the last value for the key.
@@ -295,7 +268,7 @@
 # friends["Rahul"] = "Python"
 # print(friends) # {'Ritika': 'Python ', 'Rahul': 'Python'}
 
-# Task 9
+# Task 8
 # Can you change the values inside a list which is contained in set S?
 # s = {8, 7, 12, "SRL", [1, 2]}
 # Solution
