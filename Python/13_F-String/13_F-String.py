@@ -53,7 +53,6 @@
 # In PHP, it is known as complex (curly) syntax.
 # In Java, it is known as string formatting.
 # In Ruby, it is known as string interpolation.
-# In Perl, it is known as string interpolation.
 
 # Task 1:
 # Create a program that asks the user to enter their name and age. Then, print a message that says "Hello, name. You are age years old."
