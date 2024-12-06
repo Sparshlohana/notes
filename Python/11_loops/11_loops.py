@@ -255,7 +255,7 @@
 #     fact *= i
 # print("Factorial of", num, "is", fact)
 
-# Task 9
+# Task 7
 # Write a program to print the following star pattern.
 # *
 # **
@@ -376,11 +376,11 @@
 # For n = input from user.
 # Solution
 # n = int(input("Enter a number: "))
-# for i in range(1, n+1):
+# for i in range(1, n + 1):
 #     if i == 1 or i == n:
 #         print("* " * n)
 #     else:
-#         print("* " + "  " * (n-2) + "*")
+#         print("* " + "  " * (n - 2) + "*")
 
 # Task 16
 # Write a program to print the following star pattern.
