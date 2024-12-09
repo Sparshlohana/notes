@@ -91,55 +91,55 @@
 # To install the pygame module, run the following command in your terminal:
 # pip install pygame
 
-import pygame
-import random
-# Initialize pygame mixer
-pygame.mixer.init()
+# import pygame
+# import random
+# # Initialize pygame mixer
+# pygame.mixer.init()
 
-# Load sound files
-win_sound = pygame.mixer.Sound("Python/14_project1/win.mp3")
-lose_sound = pygame.mixer.Sound("Python/14_project1/lose.mp3")
+# # Load sound files
+# win_sound = pygame.mixer.Sound("Python/14_project1/win.mp3")
+# lose_sound = pygame.mixer.Sound("Python/14_project1/lose.mp3")
 
-user_score = 0
-computer_score = 0
+# user_score = 0
+# computer_score = 0
 
-while True:
-    user = input("What's your choice? 'rock', 'paper' or 'scissors'\n")
-    if user == 'no':
-        break
-    computer = random.choice(['rock', 'paper', 'scissors'])
+# while True:
+#     user = input("What's your choice? 'rock', 'paper' or 'scissors'\n")
+#     if user == 'no':
+#         break
+#     computer = random.choice(['rock', 'paper', 'scissors'])
 
-    if user == computer:
-        print(f"It's a tie! Computer also chose {computer}")
-    elif user == 'rock':
-        if computer == 'paper':
-            print("You lose! Computer chose paper")
-            computer_score += 1
-            lose_sound.play()
-        else:
-            print("You win! Computer chose scissors")
-            user_score += 1
-            win_sound.play()
-    elif user == 'paper':
-        if computer == 'scissors':
-            print("You lose! Computer chose scissors")
-            computer_score += 1
-            lose_sound.play()
-        else:
-            print("You win! Computer chose rock")
-            user_score += 1
-            win_sound.play()
-    elif user == 'scissors':
-        if computer == 'rock':
-            print("You lose! Computer chose rock")
-            computer_score += 1
-            lose_sound.play()
-        else:
-            print("You win! Computer chose paper")
-            user_score += 1
-            win_sound.play()
-    else:
-        print("Please enter a valid input")
+#     if user == computer:
+#         print(f"It's a tie! Computer also chose {computer}")
+#     elif user == 'rock':
+#         if computer == 'paper':
+#             print("You lose! Computer chose paper")
+#             computer_score += 1
+#             lose_sound.play()
+#         else:
+#             print("You win! Computer chose scissors")
+#             user_score += 1
+#             win_sound.play()
+#     elif user == 'paper':
+#         if computer == 'scissors':
+#             print("You lose! Computer chose scissors")
+#             computer_score += 1
+#             lose_sound.play()
+#         else:
+#             print("You win! Computer chose rock")
+#             user_score += 1
+#             win_sound.play()
+#     elif user == 'scissors':
+#         if computer == 'rock':
+#             print("You lose! Computer chose rock")
+#             computer_score += 1
+#             lose_sound.play()
+#         else:
+#             print("You win! Computer chose paper")
+#             user_score += 1
+#             win_sound.play()
+#     else:
+#         print("Please enter a valid input")
 
-print(f"Your score: {user_score}")
-print(f"Computer's score: {computer_score}")
+# print(f"Your score: {user_score}")
+# print(f"Computer's score: {computer_score}")
