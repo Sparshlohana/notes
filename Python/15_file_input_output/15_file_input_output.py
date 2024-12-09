@@ -1,4 +1,4 @@
-# Whenever a python program is run, it is loaded in the memory.
+# Whenever a python program is running, it is loaded in the memory.
 # The memory here is called RAM (Random Access Memory).
 # Ram is volatile memory, which means that the data is lost when the power is turned off.
 
@@ -60,7 +60,7 @@
 # To open a file in write mode, we use the open() function with the mode as "w".
 # The write() method writes the content to the file.
 
-# Lets open the file test.txt in write mode and write some content to it.
+# Let's open the file test.txt in write mode and write some content to it.
 # If the file does not exist, it will be created.
 # If the file exists, it will be overwritten.
 
