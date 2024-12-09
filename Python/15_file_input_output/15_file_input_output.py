@@ -301,4 +301,3 @@
 
 # os.rename("Python/15_file_input_output/this.txt", "Python/15_file_input_output/renamed_by_python.txt")
 # print("The file has been renamed successfully.")
-

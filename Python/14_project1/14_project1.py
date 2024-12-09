@@ -40,7 +40,7 @@
 # else:
 #     print("Please enter a valid input")
 
-#  Now what i want is, the game should not end after one round. It should ask the user if he/she wants to play again. And record the score of the user and the computer. And at the end, it should print the final score of the user and the computer.
+#  Now what I want is, the game should not end after one round. It should ask the user if he/she wants to play again. And record the score of the user and the computer. And at the end, it should print the final score of the user and the computer.
 
 # # Importing the random module
 # import random

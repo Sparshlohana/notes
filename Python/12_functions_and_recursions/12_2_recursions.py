@@ -15,11 +15,11 @@
 # Factorial of n = n * (n-1) * (n-2) * (n-3) * .... * 1
 # Factorial of n = n * Factorial of (n-1)
 
-# def factorial(n):
-#     if n == 0 or n == 1:
-#         return 1
-#     else:
-#         return n * factorial(n-1)
+def factorial(n):
+    if n == 0 or n == 1:
+        return 1
+    else:
+        return n * factorial(n-1)
 
 
 # print(factorial(5))
